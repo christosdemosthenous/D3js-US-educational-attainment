@@ -7,27 +7,29 @@
     <link href="assets/stylesheets/style.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<script type="text/javascript" src="sound-mouseover.js"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
 </head>
-  <header>
+<header>
        <nav>
     <ul>
-      <li><a href="#top" >Top</a></li>
-      <li><a href="#national">National</a></li>
-      <li><a href="#regional">Regional</a></li>
-      <li><a href="#state">State-Level</a></li>
+      <li><a href="#top" onmouseover="playclip();">Top</a></li>
+      <li><a href="#national"onmouseover="playclip();" >National</a></li>
+      <li><a href="#regional"onmouseover="playclip();">Regional</a></li>
+      <li><a href="#state"onmouseover="playclip();">State-Level</a></li>
     <ul>
         </nav>
     </header>
 <body>
-    <h1 class="title">Educational Attainment in the United States</h1>
+    <h1 class="title" onmouseover="responsiveVoice.speak('Educational Attainment in the United States')" onmouseleave="responsiveVoice.cancel();" ;>Educational Attainment in the United States</h1>
         
 	
 	<p><br></p>
-    <h2 class="subtitle">Nation-Wide Education Level of Population in Schooling</h2>
+    <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling')" onmouseleave="responsiveVoice.cancel();" ;>Nation-Wide Education Level of Population in Schooling</h2>
 	
     <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
     <p><br><br><br></p>
-    <h2 class="subtitle">Educational Attainment: Region-level Breakdown of University Students</h2>
+    <h2 class="subtitle"onmouseover="responsiveVoice.speak('Educational Attainment: Region-level Breakdown of University Students')" onmouseleave="responsiveVoice.cancel();" ;>Educational Attainment: Region-level Breakdown of University Students</h2>
 	
     <form id="tree-form">
         <div class="radio-toolbar">
@@ -45,7 +47,7 @@
     <div id="chart"></div>
 	<a name="state"></a>
     <p><br><br></p>
-    <h2 class="subtitle">Education Level of Population in Schooling: State-level Breakdown</h2>
+    <h2 class="subtitle"onmouseover="responsiveVoice.speak('Education Level of Population in Schooling: State-level Breakdown')" onmouseleave="responsiveVoice.cancel();" ;>Education Level of Population in Schooling: State-level Breakdown</h2>
 	
     <form id="stack-form">
         <div class="radio-toolbar">
@@ -82,5 +84,10 @@
  */
 </script>
 
+	<audio>
+<source src="click.mp3"></source>
+<source src="click.ogg"></source>
+</audio>	
+<div id="sounddiv"><bgsound id="sound"></div>
 </body>
 </html>
