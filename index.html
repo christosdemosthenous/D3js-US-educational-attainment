@@ -87,6 +87,10 @@
 function transition(name) {
 	if (name === "national") {
 		$("#chart").fadeOut(250);
+		$("#pie-chart").fadeOut(250);
+		$("#treemap").fadeOut(250);
+		$("#stacked-bar-chart").fadeOut(250);
+		
 		//location.reload();
 	}
 	if (name === "regional") {
