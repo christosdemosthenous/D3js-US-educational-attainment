@@ -83,6 +83,30 @@
 /* scrollTop() >= 240
    Should be equal the the height of the header
  */	
+	
+function transition(name) {
+	if (name === "national") {
+		$("#chart").fadeOut(250);
+		//location.reload();
+	}
+	if (name === "regional") {
+		$("#initial-content").fadeOut(250);
+		$("#value-scale").fadeOut(250);
+		$("#view-donor-type").fadeOut(250);
+		$("#view-source-type").fadeOut(250);
+		$("#view-party-type").fadeIn(1000);
+		return partyGroup();
+	}
+	if (name === "state-level") {
+		$("#initial-content").fadeOut(250);
+		$("#value-scale").fadeOut(250);
+		$("#view-party-type").fadeOut(250);
+		$("#view-source-type").fadeOut(250);
+		$("#view-donor-type").fadeIn(1000);
+		return donorType();
+	}
+	}
+
 </script>
  <script src="chart.js"></script>
 
