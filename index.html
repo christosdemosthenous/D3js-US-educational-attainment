@@ -64,9 +64,7 @@
     
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="assets/scripts/script_1.js"></script>
-<script src="assets/scripts/script_2.js"></script>
-<script src="assets/scripts/script_3.js"></script>
+
 <script>
     $( document ).ready(function() {
       $(window).scroll(function(){
@@ -82,39 +80,9 @@
 	
 /* scrollTop() >= 240
    Should be equal the the height of the header
- */
-	
-function transition(name) {
-	if (name === "top") {
-		 $("pie-chart").fadeOut(250);
-		//location.reload();
-	}
-	if (name === "national") {
-		$("#initial-content").fadeOut(250);
-		$("#value-scale").fadeOut(250);
-		$("#view-donor-type").fadeOut(250);
-		$("#view-source-type").fadeOut(250);
-		$("#view-party-type").fadeIn(1000);
-		return partyGroup();
-	}
-	if (name === "regional") {
-		$("#initial-content").fadeOut(250);
-		$("#value-scale").fadeOut(250);
-		$("#view-party-type").fadeOut(250);
-		$("#view-source-type").fadeOut(250);
-		$("#view-donor-type").fadeIn(1000);
-		return donorType();
-	}
-	if (name === "state-level")
-		$("#initial-content").fadeOut(250);
-		$("#value-scale").fadeOut(250);
-		$("#view-donor-type").fadeOut(250);
-		$("#view-party-type").fadeOut(250);
-		$("#view-source-type").fadeIn(1000);
-		return fundsType();
-	}	
+ */	
 </script>
-
+ <script src="chart.js"></script>
 
 	<audio>
 <source src="click.mp3"></source>
