@@ -13,7 +13,7 @@
 <header>
        <nav>
     <ul>
-      <li><a href="#top" role="button" id="top" onmouseover="playclip();">Top</a></li>
+      <li><a href="#top" role="button" id="top" onmouseover="playclip();" onclick="hideSVG()">Top</a></li>
       <li><a href="#national" role="button" id="national" onmouseover="playclip();" >National</a></li>
       <li><a href="#regional"role="button" id="regional" onmouseover="playclip();">Regional</a></li>
       <li><a href="#state" role="button" id="state-level" onmouseover="playclip();">State-Level</a></li>
@@ -84,32 +84,15 @@
    Should be equal the the height of the header
  */	
 	
-function transition(name) {
-	if (name === "national") {
-		$("#chart").fadeOut(250);
-		$("#pie-chart").fadeOut(250);
-		$("#treemap").fadeOut(250);
-		$("#stacked-bar-chart").fadeOut(250);
-		
-		//location.reload();
-	}
-	if (name === "regional") {
-		$("#initial-content").fadeOut(250);
-		$("#value-scale").fadeOut(250);
-		$("#view-donor-type").fadeOut(250);
-		$("#view-source-type").fadeOut(250);
-		$("#view-party-type").fadeIn(1000);
-		return partyGroup();
-	}
-	if (name === "state-level") {
-		$("#initial-content").fadeOut(250);
-		$("#value-scale").fadeOut(250);
-		$("#view-party-type").fadeOut(250);
-		$("#view-source-type").fadeOut(250);
-		$("#view-donor-type").fadeIn(1000);
-		return donorType();
-	}
-	}
+function hideSVG() {
+  var style = document.getElementById("pie-chart").style.display;
+  if(style === "none")
+    document.getElementById("mySvg").style.display = "none";
+  else
+    ddocument.getElementById("mySvg").style.display = "none";
+  //or to hide the all svg
+  //
+}
 
 </script>
  <script src="chart.js"></script>
