@@ -47,7 +47,7 @@
     <div id="chart"></div>
 	<a name="state"></a>
     <p><br><br></p>
-    <h2 class="subtitle"onmouseover="responsiveVoice.speak('Education Level of Population in Schooling: State-level Breakdown')" onmouseleave="responsiveVoice.cancel();" ;>Education Level of Population in Schooling: State-level Breakdown</h2>
+    <h2 id="statelevell" class="subtitle"onmouseover="responsiveVoice.speak('Education Level of Population in Schooling: State-level Breakdown')" onmouseleave="responsiveVoice.cancel();" ;>Education Level of Population in Schooling: State-level Breakdown</h2>
 	
     <form id="stack-form">
         <div class="radio-toolbar">
@@ -92,10 +92,14 @@ function national() {
 }
 
 function regional() {
+	document.getElementById("stack-form").style.display = "none";
+	document.getElementById("statelevell").style.display = "none";
 	document.getElementById("nationwide").style.display = "none";
   	document.getElementById("pie-chart").style.display = "none";
 	document.getElementById("stacked-bar-chart").style.display = "none";
 	document.getElementById("chart").style.display = "block";
+	
+	
 }
 
 function statelevel() {
