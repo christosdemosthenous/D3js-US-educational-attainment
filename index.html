@@ -13,7 +13,7 @@
 <header>
        <nav>
     <ul>
-      <li><a href="#top" role="button" id="top" onmouseover="playclip();"> Top</a></li>
+      <li><a href="#top" role="button" id="top" onmouseover="playclip();" onclick="top()"> Top</a></li>
       <li><a href="#national" role="button" id="national" onmouseover="playclip();" onclick="national()"> National</a></li>
       <li><a href="#regional"role="button" id="regional" onmouseover="playclip();"  onclick="regional()">Regional</a></li>
       <li><a href="#state" role="button" id="state-level" onmouseover="playclip();" onclick="statelevel()">State-Level</a></li>
@@ -83,7 +83,19 @@
 /* scrollTop() >= 240
    Should be equal the the height of the header
  */	
+
+function top() {
+	document.getElementById("regionlevel").style.display = "none";
+	document.getElementById("tree-form").style.display = "none";
+	document.getElementById("stack-form").style.display = "none";
+	document.getElementById("statelevell").style.display = "none";
+    	document.getElementById("chart").style.display = "none";
+	document.getElementById("stacked-bar-chart").style.display = "none";
+	document.getElementById("pie-chart").style.display = "block";
+	document.getElementById("nationwide").style.display = "block";
 	
+
+}
 
 function national() {
 	document.getElementById("regionlevel").style.display = "none";
