@@ -84,17 +84,23 @@
    Should be equal the the height of the header
  */	
 	
-function regional() {
-    document.getElementById("pie-chart").style.display = "none";
-	document.getElementById("stacked-bar-chart").style.display = "none";
-}
+
 function national() {
     document.getElementById("chart").style.display = "none";
 	document.getElementById("stacked-bar-chart").style.display = "none";
+	document.getElementById("pie-chart").style.display = "block";
 }
+
+function regional() {
+    document.getElementById("pie-chart").style.display = "none";
+	document.getElementById("stacked-bar-chart").style.display = "none";
+	document.getElementById("chart").style.display = "block";
+}
+
 function statelevel() {
     document.getElementById("pie-chart").style.display = "none";
 	document.getElementById("chart").style.display = "none";
+	document.getElementById("stacked-bar-chart").style.display = "block";
 }
 
 </script>
