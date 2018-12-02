@@ -13,10 +13,10 @@
 <header>
        <nav>
     <ul>
-      <li><a href="#top" id="top" onmouseover="playclip();">Top</a></li>
-      <li><a href="#national" id="national" onmouseover="playclip();" >National</a></li>
-      <li><a href="#regional"id="regional" onmouseover="playclip();">Regional</a></li>
-      <li><a href="#state" id="state-level" onmouseover="playclip();">State-Level</a></li>
+      <li><a href="#top" role="button" id="top" onmouseover="playclip();">Top</a></li>
+      <li><a href="#national" role="button" id="national" onmouseover="playclip();" >National</a></li>
+      <li><a href="#regional"role="button" id="regional" onmouseover="playclip();">Regional</a></li>
+      <li><a href="#state" role="button" id="state-level" onmouseover="playclip();">State-Level</a></li>
     <ul>
         </nav>
     </header>
@@ -86,7 +86,7 @@
 	
 function transition(name) {
 	if (name === "top") {
-		 donutChart(pie.chart);
+		 $("pie-chart").fadeOut(250);
 		//location.reload();
 	}
 	if (name === "national") {
