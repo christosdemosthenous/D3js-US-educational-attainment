@@ -25,7 +25,7 @@
         
 	
 	<p><br></p>
-    <h2 class="subtitle" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling')" onmouseleave="responsiveVoice.cancel();" ;>Nation-Wide Education Level of Population in Schooling</h2>
+    <h2 class="subtitle" id="nationwide" onmouseover="responsiveVoice.speak('Nation-Wide Education Level of Population in Schooling')" onmouseleave="responsiveVoice.cancel();" ;>Nation-Wide Education Level of Population in Schooling</h2>
 	
     <svg id="pie-chart" width="960" height="450"></svg><a name="regional"></a>
     <p><br><br><br></p>
@@ -92,6 +92,7 @@ function national() {
 }
 
 function regional() {
+	document.getElementById("nationwide").style.display = "none";
   	document.getElementById("pie-chart").style.display = "none";
 	document.getElementById("stacked-bar-chart").style.display = "none";
 	document.getElementById("chart").style.display = "block";
