@@ -13,10 +13,10 @@
 <header>
        <nav>
     <ul>
-      <li><a href="#top" onmouseover="playclip();">Top</a></li>
-      <li><a href="#national"onmouseover="playclip();" >National</a></li>
-      <li><a href="#regional"onmouseover="playclip();">Regional</a></li>
-      <li><a href="#state"onmouseover="playclip();">State-Level</a></li>
+      <li><a href="#top" id="top" onmouseover="playclip();">Top</a></li>
+      <li><a href="#national" id="national" onmouseover="playclip();" >National</a></li>
+      <li><a href="#regional"id="regional" onmouseover="playclip();">Regional</a></li>
+      <li><a href="#state" id="state-level" onmouseover="playclip();">State-Level</a></li>
     <ul>
         </nav>
     </header>
@@ -79,10 +79,47 @@
     });
 });
 
+	
 /* scrollTop() >= 240
    Should be equal the the height of the header
  */
+	
+function transition(name) {
+	if (name === "top") {
+		$("#initial-content").fadeIn(250);
+		$("#value-scale").fadeIn(1000);
+		$("#view-donor-type").fadeOut(250);
+		$("#view-source-type").fadeOut(250);
+		$("#view-party-type").fadeOut(250);
+		return total();
+		//location.reload();
+	}
+	if (name === "national") {
+		$("#initial-content").fadeOut(250);
+		$("#value-scale").fadeOut(250);
+		$("#view-donor-type").fadeOut(250);
+		$("#view-source-type").fadeOut(250);
+		$("#view-party-type").fadeIn(1000);
+		return partyGroup();
+	}
+	if (name === "regional") {
+		$("#initial-content").fadeOut(250);
+		$("#value-scale").fadeOut(250);
+		$("#view-party-type").fadeOut(250);
+		$("#view-source-type").fadeOut(250);
+		$("#view-donor-type").fadeIn(1000);
+		return donorType();
+	}
+	if (name === "state-level")
+		$("#initial-content").fadeOut(250);
+		$("#value-scale").fadeOut(250);
+		$("#view-donor-type").fadeOut(250);
+		$("#view-party-type").fadeOut(250);
+		$("#view-source-type").fadeIn(1000);
+		return fundsType();
+	}	
 </script>
+
 
 	<audio>
 <source src="click.mp3"></source>
